@@ -16,20 +16,32 @@
         <!--Create Log In Form-->
         <div class = "container">
 
-            <form class="login form_hidden" id = "login"> 
+            <!-- TODO: Create Login/Signup Slider Buttons -->
+            <!-- <div class = "slide_box">
+                <div class = "slide_controls">
+                    <div id = "toggle_btn"></div>
+                    <button type = "button" class = "slide_btn">Log In</button>
+                    <button type = "button" class = "slide_btn">Sign Up</button>
+                </div>
+            </div> -->
+
+            <form class="login" id = "login"> 
                 <!--Login  Form Title-->
                 <div class = "title_text">
-                    <div class = "login_title">Log in</div>
+                    <div class = "login_title">Log In</div>
                 </div>
                 <!--Error Message-->
                 <div class = "login_form_error"></div>
 
                 <!--Create form input for username and password and error message-->
                 <div class = "input_login-group">
-                    <input type = "text" class = "input_login" id = "username" placeholder="username">
+                    <input type = "text" class = "input_login" id = "email" placeholder="Email" required>
                 </div>
                 <div class = "input_login-group">
-                    <input type = "password" class = "input_login" id = "password" placeholder="password">
+                    <input type = "text" class = "input_login" id = "studentID" placeholder="Student ID" required>
+                </div>
+                <div class = "input_login-group">
+                    <input type = "password" class = "input_login" id = "password" placeholder="Password" required>
                 </div>
                 <!--Log In Button-->
                 <button class = "login_button" type ="submit">Log In</button>
@@ -46,42 +58,53 @@
             </form>
 
             <!-- Create Sign Up Section -->
-            <form class="signup" id = "signup"> 
+            <form class="signup form_hidden" id = "signup"> 
                 <!--Signup Form Title-->
                 <div class = "title_text">
                     <div class = "signup_title">Sign Up</div>
                 </div>
-
-                <!-- TODO: Create Login/Signup Slider Buttons -->
-                <!-- <div class = "slide_controls">
-                    <input type = "radio" name = "slider" id = "login" checked>
-                    <input type = "radio" name = "slider" id = "signup">
-                    <label for = "login" class="slide_login">Log In</label>
-                    <label for = "signup" class="slide_signup">Sign Up</label>
-                    <div class = "slide_tab"></div>
-                </div> -->
 
                 <!--Error Message-->
                 <div class = "login_form_error"></div>
 
                 <!-- Create Input Fields -->
                 <div class = "input_login-group">
-                    <input type = "text" class = "input_login" id = "username" placeholder="username">
+                    <input type = "text" class = "input_login" id = "studentID" placeholder="Student ID" required>
                 </div>
                 <div class = "input_login-group">
-                    <input type = "text" class = "input_login" id = "email" placeholder="email address">
+                    <input type = "text" class = "input_login" id = "first_name" placeholder="First Name" required>
                 </div>
                 <div class = "input_login-group">
-                    <input type = "password" class = "input_login" id = "password" placeholder="password">
+                    <input type = "text" class = "input_login" id = "last_name" placeholder="Last Name" required>
                 </div>
                 <div class = "input_login-group">
-                    <input type = "password" class = "input_login" id = "password" placeholder="confirm password">
+                    <input type = "text" class = "input_login" id = "email" placeholder="Email Address" required>
+                </div>
+                <div class = "input_login-group">
+                    <input type = "password" class = "input_login" id = "password" placeholder="Password" required>
+                </div>
+                <div class = "input_login-group">
+                    <input type = "password" class = "input_login" id = "password" placeholder="Confirm Password" required>
                 </div>
 
                 <!-- Select University Dropdown -->
                 <select class = "select_uni">
                     <option disabled selected>Choose University</option>
                     <option value = "Oakland University">Oakland University, MI</option>
+                </select>
+
+                <!-- Select State Dropdown -->
+                <select class = "select_state">
+                    <option disabled selected>State</option>
+                    <option value = "MI">MI</option>
+                </select>
+
+                <!-- Select Account Type -->
+                <select class = "select_type">
+                    <option disabled selected>Account Type</option>
+                    <option value = "Student">Student</option>
+                    <option value = "Instructor">Instructor</option>
+                    <option value = "TA">Teaching Assistant</option>
                 </select>
 
                 <!--Create Account Button-->
